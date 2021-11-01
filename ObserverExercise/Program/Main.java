@@ -15,7 +15,7 @@ public class Main {
         publisher.subscribe(Symbol);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Message : ");
+        System.out.print("Message(\"quit\" to exit) : ");
         String input = scanner.nextLine();
         while (!input.equals("quit")) {
             publisher.publish(input);
