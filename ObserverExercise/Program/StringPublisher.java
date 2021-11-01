@@ -15,7 +15,6 @@ public class StringPublisher implements java.util.concurrent.Flow.Publisher {
     public void subscribe(Subscriber subscriber) {
         
         if(!subscribers.contains(subscriber)){
-            // "abcABC   ".matches("[a-zA-Z]+");
             subscribers.add((StringSubscriber) subscriber);
             StringSubscription subscription = new StringSubscription(subscriber);
             subscriptions.add(subscription);
@@ -31,7 +30,7 @@ public class StringPublisher implements java.util.concurrent.Flow.Publisher {
     public void publish(String msg){
         for (StringSubscription subscription : subscriptions) {
             subscription.savemsg(msg);
-            subscription.request(1);
+            subscription.request(Long.MAX_VALUE);
         }
 
     }

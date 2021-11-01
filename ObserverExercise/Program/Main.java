@@ -6,23 +6,23 @@ public class Main {
         
 
         StringPublisher publisher = new StringPublisher();
-        StringSubscriber alphabet = new AlphabetSubscriber();
-        StringSubscriber number = new NumberSubscriber();
-        StringSubscriber symbol = new SymbolSubscriber();
+        AlphabetSubscriber Alpha = new AlphabetSubscriber();
+        NumberSubscriber Number = new NumberSubscriber();
+        SymbolSubscriber Symbol = new SymbolSubscriber();
 
-        publisher.subscribe(alphabet);
-        publisher.subscribe(number);
-        publisher.subscribe(symbol);
+        publisher.subscribe(Alpha);
+        publisher.subscribe(Number);
+        publisher.subscribe(Symbol);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter text : ");
-        String inputText = scanner.nextLine();
-        while (!inputText.equals("exit")) {
-            publisher.publish(inputText);
-            System.out.print("Enter text : ");
-            inputText = scanner.nextLine();
+        System.out.print("Message : ");
+        String input = scanner.nextLine();
+        while (!input.equals("quit")) {
+            publisher.publish(input);
+            System.out.print("Message : ");
+            input = scanner.nextLine();
         }
-        System.out.println("Exit");
+        System.out.println("End Programe");
         
     }
 }

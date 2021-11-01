@@ -18,7 +18,7 @@ public class StringSubscription implements java.util.concurrent.Flow.Subscriptio
               subscriber.onError(ex);
             } else {
                 subscriber.onNext(msg);
-                subscriber.onComplete();
+                // subscriber.onComplete();
                 this.cancel();
             }
           }

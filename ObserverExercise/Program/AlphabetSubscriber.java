@@ -4,7 +4,6 @@ import java.util.concurrent.Flow.Subscription;
 public class AlphabetSubscriber extends StringSubscriber {
 
     public AlphabetSubscriber() {
-        super.check = "[a-zA-Z]";
         super.storage += "AlphabetSubscriber.txt";
     }
 
@@ -17,6 +16,8 @@ public class AlphabetSubscriber extends StringSubscriber {
     @Override
     public void onNext(Object item) {
         // TODO Auto-generated method stub
+        super.check = "[\\p{Alpha}]";
+        
         super.onNext(item);
 
         
