@@ -1,0 +1,71 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>
+</help_text><element><id>UMLClass</id><coordinates><x>1010</x><y>30</y><w>210</w><h>260</h></coordinates><panel_attributes>
+*Person*
+
+--
+- name : String
+- age : Integer
+- height : Integer
+- weight : Integer
+--
++ getName() : String
++ setName(String name) : void
++ getAge() : Integer
++ setAge(Integer age) : void
++ getHeight : Integer
++ setHeight(Integer height) : void
++ getWeight() : Integer
++ setWeight(Integer weight) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>80</y><w>290</w><h>150</h></coordinates><panel_attributes>
+*People*
+
+--
+- members : List&lt;Person&gt;
+- sortStrategy : SortStrategy
+--
+- setSortStrategy(SortStrategy sortStrategy) : void
+- addMember(Person p) : void
+- print(PrintStream out) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>390</y><w>290</w><h>100</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+*SortStrategy*
+
+--
+
+--
++ customSort(List&lt;Person&gt; people) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>480</y><w>150</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>130;10;10;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>590</y><w>290</w><h>100</h></coordinates><panel_attributes>
+*AgeSortStrategy*
+
+--
+
+--
++ customSort(List&lt;Person&gt; people) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>690</x><y>590</y><w>290</w><h>100</h></coordinates><panel_attributes>
+*NameSortStrategy*
+
+--
+
+--
++ customSort(List&lt;Person&gt; people) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>590</y><w>290</w><h>100</h></coordinates><panel_attributes>
+*HeightSortStrategy*
+
+--
+
+--
++ customSort(List&lt;Person&gt; people) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>990</x><y>590</y><w>290</w><h>100</h></coordinates><panel_attributes>
+*WeightStrategy*
+
+--
+
+--
++ customSort(List&lt;Person&gt; people) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>480</y><w>140</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;120;110</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>480</y><w>370</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;350;110</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>480</y><w>390</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>370;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>140</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=0..1
+m2=0..*
+r2= -members</panel_attributes><additional_attributes>10;20;190;20</additional_attributes></element><element><id>Relation</id><coordinates><x>670</x><y>220</y><w>100</w><h>190</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+r1= -people
+m2=1
+r2= -sortStrategy</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element></diagram>

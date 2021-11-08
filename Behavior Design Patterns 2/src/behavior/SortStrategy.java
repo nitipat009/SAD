@@ -1,5 +1,5 @@
-package edu.parinya.softarchdesign.behavior2;
 
+package behavior;
 // DO NOT MODIFY ANYTHING BELOW THIS LINE!!
 import java.util.List;
 
